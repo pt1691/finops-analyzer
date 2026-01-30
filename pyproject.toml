@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finops-analyzer"
+version = "0.1.0"
+description = "AI-Powered Financial Portfolio Analyzer with NLP Sentiment Analysis"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [
+    { name = "Praneeth Turlapati", email = "praneeth1691@gmail.com" }
+]
+keywords = [
+    "finance",
+    "portfolio",
+    "stock-analysis",
+    "sentiment-analysis",
+    "ai",
+    "nlp",
+    "cli",
+    "devops"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pandas>=2.0.0",
+    "yfinance>=0.2.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "httpx>=0.25.0",
+    "openai>=1.0.0",
+    "anthropic>=0.18.0",
+    "python-dotenv>=1.0.0",
+    "diskcache>=5.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+
+[project.scripts]
+finops = "finops_analyzer.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/praneethturlapati/finops-analyzer"
+Repository = "https://github.com/praneethturlapati/finops-analyzer"
+Issues = "https://github.com/praneethturlapati/finops-analyzer/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finops_analyzer"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "SIM"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=finops_analyzer"
