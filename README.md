@@ -193,7 +193,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 **Praneeth Turlapati**
 - LinkedIn: [linkedin.com/in/praneeth-turlapati](https://linkedin.com/in/praneeth-turlapati)
-- GitHub: [github.com/praneethturlapati](https://github.com/pt1691)
+- GitHub: [github.com/pt1691](https://github.com/pt1691)
 
 ---
 
