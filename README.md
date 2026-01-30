@@ -9,7 +9,18 @@
 
 A sophisticated Python CLI tool that analyzes stock portfolios using real-time market data, technical indicators, and AI-powered sentiment analysis. Get actionable insights with beautiful terminal dashboards.
 
-![FinOps Analyzer Demo](docs/demo.gif)
+## ⚡ 30-Second Quick Start
+
+```bash
+git clone https://github.com/pt1691/finops-analyzer.git && cd finops-analyzer
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e .
+finops demo  # See it in action!
+```
+
+**That's it!** The demo shows a sample portfolio analysis with real stock data.
+
+---
 
 ## ✨ Features
 
@@ -21,56 +32,29 @@ A sophisticated Python CLI tool that analyzes stock portfolios using real-time m
 - 💾 **Smart Caching** - Reduces API calls with intelligent disk caching
 - 🔧 **Highly Configurable** - Environment-based configuration for flexibility
 
-## 🚀 Quick Start
+## 🚀 Installation & Usage
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/praneethturlapati/finops-analyzer.git
+git clone https://github.com/pt1691/finops-analyzer.git
 cd finops-analyzer
-
-# Create virtual environment
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# Install in development mode
 pip install -e ".[dev]"
 ```
 
-### Configuration
+### Try It Out
 
 ```bash
-# Copy example configuration
-cp .env.example .env
+# Run demo with sample portfolio
+finops demo
 
-# Edit .env with your API keys
-# Required for AI features: OpenAI or Anthropic API key
-```
+# Get a quick quote for any stock
+finops quote TSLA
 
-### Usage
-
-```bash
-# Analyze a portfolio from CSV
-finops analyze examples/sample_portfolio.csv
-
-# Quick analysis with stock symbols
-finops analyze --symbols AAPL,GOOGL,MSFT,AMZN
-
-# Get a quick quote for a single stock
-finops quote NVDA
-
-# Skip AI analysis (faster, no API costs)
-finops analyze examples/sample_portfolio.csv --no-ai
-
-# Save results to JSON
-finops analyze --symbols AAPL,MSFT -o results.json
-
-# View current configuration
-finops config
-
-# Clear cache
-finops clear-cache
+# Analyze your own portfolio
+finops analyze my_portfolio.csv
 ```
 
 ## 📋 Portfolio CSV Format
