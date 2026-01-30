@@ -62,9 +62,9 @@ dev = [
 finops = "finops_analyzer.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/praneethturlapati/finops-analyzer"
-Repository = "https://github.com/praneethturlapati/finops-analyzer"
-Issues = "https://github.com/praneethturlapati/finops-analyzer/issues"
+Homepage = "https://github.com/pt1691/finops-analyzer"
+Repository = "https://github.com/pt1691/finops-analyzer"
+Issues = "https://github.com/pt1691/finops-analyzer/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/finops_analyzer"]
